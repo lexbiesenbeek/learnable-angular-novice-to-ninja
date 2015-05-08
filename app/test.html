@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="mySecondApp">
 <head>
     <title>My First AngularJS App</title>
 </head>
-<body ng-init="salary=0;percentage=0">
+<body ng-controller="FinanceController">
 <p>
     Salary:
     <input type="text" ng-model="salary"/>
@@ -15,9 +15,11 @@
 </p>
 
 <p>
-    Spent amount for shopping: <span>{{salary*percentage*0.01}}</span>
+    Spent amount for shopping: <span>{{result() | currency}}</span>
 </p>
 
     <script src="lib/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
 </body>
 </html>
